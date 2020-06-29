@@ -136,25 +136,30 @@
              <br>
                 <div class="container">
                 <div class="row">
-                    <div class="col-lg-2">.</div>
+                    <div class="col-lg-2">*</div>
                     <div class="col-lg-8">
                         <h1 class="h1-serif">Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem, totam molestiae porro quia quis! </h1> 
                     </div>
-                    <div class="col-lg-2 d-none"></div>  <!-- "d-none" bloquea el(.) -->
+                    <div class="col-lg-2 d-none">*</div>  <!-- "d-none" bloquea el(.) -->
                 </div>
             </div>
             <hr>
-
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2"><p class="p-serif">por <em>Nombre Apellido</em></p>
+                    <div class="col-lg-2"><p class="p-serif"><em>Nombre Apellido</em> / <em class="read-time"></em></p> 
+
                         
                     </div>
                     <div class="col-lg-8"> 
                         <img src="https://i.imgur.com/XhBMGVk.jpg" class="img-fluid" alt="Responsive image"> <footer class="blockquote-footer text-center mb-2">Salar de Uyuni <cite title="Source Title">Foto sacada de imgur</cite></footer>
+
                         <p class="p-serif">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam excepturi quod laboriosam a cupiditate doloribus atque tempore qui quidem quis dolores blanditiis, expedita <mark class="resaltar-amarillo"> repudiandae iusto rem nihil at voluptas labore?. </mark>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat alias temporibus illo voluptas magni magnam soluta aspernatur nesciunt. Explicabo nesciunt deleniti labore commodi nulla, autem magnam illum eveniet nemo tenetur?
                         </p>
+                        <blockquote class="blockquote text-center cita-serif">
+                          <p class="mb-0">"Este es un texto de prueba para ver como lucen las citas textuales. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore qui possimus a soluta dolores, doloremque nihil vel eligendi eveniet eos eaque veritatis esse alias itaque minima. Alias temporibus nesciunt accusantium!"</p>
+                          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        </blockquote>
                         <p class="p-serif">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam excepturi quod laboriosam a cupiditate doloribus atque tempore qui quidem quis dolores blanditiis, expedita <a href="https://www.youtube.com/watch?v=hfnqP9XnCQQ">repudiandae iustos</a>  rem nihil at voluptas labore?. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat alias temporibus illo voluptas magni magnam soluta aspernatur nesciunt. Explicabo nesciunt deleniti labore commodi nulla, autem magnam illum eveniet nemo tenetur?    <!-- <a href="pagina.html" target="_blank">Título del enlace</a> para que el enlace se abra en una nueva página -->
                         </p>
@@ -188,8 +193,35 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script>
+  const paragraphs = document.querySelectorAll("p");
+  const readTimeDiv = document.querySelector(".read-time");
+  const calculateReadTime = () => {
+    let numberOfWords = 0;
+    const averageWPM = 265;
+    paragraphs.forEach(paragraph => {
+      numberOfWords += paragraph.innerHTML.split(" ").length;
+    });
+
+    let readTime = numberOfWords / averageWPM;
+
+    // console.log("Number of words: " + numberOfWords );  
+    // console.log("Read Time: " + Math.round(readTime));
+
+    readTimeDiv.innerHTML = Math.round(readTime) + " minutos";
+
+
+  };
+  calculateReadTime()
+</script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+
   </body>
 </html>

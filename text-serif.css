@@ -19,3 +19,16 @@
     font-family: 'Old Standard TT', serif;
     font-size: 20px;    
  }
+.cita-serif{
+    font-family: 'Old Standard TT', serif;
+    font-size: 18px;
+    padding: 30px;
+}
+
+
+.read-time{
+    font-family: 'Old Standard TT', serif;
+    color: blue;
+    font-style: unset;
+    font-size: 15px;
+}
