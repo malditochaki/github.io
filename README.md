@@ -1,2 +1,5 @@
-# github.io
-1
+# Maldito Ch'aki web
+Plataforma de Historia y Opinión
+Administradores:
+JOOM
+NACP
